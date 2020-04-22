@@ -23,9 +23,9 @@ Write a Flask application that displays "Hello World!" to the local host (usuall
 ## Questions of Understanding
 1. Flask is described as a "microframework" for developing web applications. What is a "microframework"?
 2. What is another web development framework in Python?
-3. In this line of code: `APP = Flask(__name__)` What does `__name__` do?
-4. What line of your code tells when and where "Hello World!" should be displayed?
-5. What do we need to type into the terminal to run our flask application?
+3. In this line of code: `APP = Flask(__name__)` What does `__name__` do? this is equal to the name of the module. If you run the App from a directory titled my_app then calling FLASK_APP=my_app would run the flask app. If the app is in a single file call demo.py then FLASK_APP=demo.py would run the application. 
+4. What line of your code tells when and where "Hello World!" should be displayed? the decorator @app.route("/") tells the url location "/" would be the homepage. whenever we navigate to the 'localhost:5000/' page this would call the hello world function to display "Hello World!"
+5. What do we need to type into the terminal to run our flask application? FLASK_APP='name of file or directory where app is held' flask run
 
 # API's
 
