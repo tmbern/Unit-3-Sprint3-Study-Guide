@@ -6,14 +6,14 @@ Have fun studying!
 
 # Questions of Understanding
 1. Define the following and give an example of an appropriate task for each:
- - Front-end:
- - Back-end:
- - Database:
-2. What is a decorator?
-3. What is a route?
-4. Why do we want to separate our code into separate files when writing an application? Why not just one big file?
-5. What is an API? Give an example of an API that is not Twitter's.
-6. What does it mean to pickle a model? Why might this be useful?
+ - Front-end: HTML/CSSS and JavaScript that is returned to a user in reponse to their       requests. This would be like the users browser page displaying a blog or something. This would be the client side.  
+ - Back-end: THis is the server side. This is where requests from the client side are received and then there is some logic that determines what the correct response is. Then it sends that response to the client. 
+ - Database: usually this is where data is actually saved. the user would send a request to a back end server where the backend then goes and gets or updates data in the database. 
+2. What is a decorator? a tool used to change the behavior of a function or class, without permanently changing the function. can be used like a function within a function. 
+3. What is a route? it mapps URLs (in the case of flask or web apps) to different actions that the URL will display and/or to generate URLs.
+4. Why do we want to separate our code into separate files when writing an application? Why not just one big file? creating the seperate files and storing them in a directory is how we make a package. It is the best way to organize code and make reference and imports from other files the most efficient. 
+5. What is an API? Give an example of an API that is not Twitter's. technical terms it is an Application Programming Interface. It is part of a server that receives requests and sends responses from and to users. One api that i have used is AlphaVantage. This was used in class as well. It allows a user to request some information on stock markets and individual stocks and will return those results to the user. 
+6. What does it mean to pickle a model? Why might this be useful? pickling is the process of translating a data object or structure to a format that can be easily saved or transferred. It can then be translated back to its original object or structure when it needs to be used. This is useful for machine learning or predictive modeling. to create teh model it needs to be trained on data. THis can take some time depending on the amount of data it is being trained on. So once the model is trained it is an object that can be pickled and called back later where it doesnt need to be retrained. 
 
 # Basics of Flask
 
@@ -21,8 +21,8 @@ Have fun studying!
 Write a Flask application that displays "Hello World!" to the local host (usually `127.0.0.1:5000` or `localhost:5000`)
 
 ## Questions of Understanding
-1. Flask is described as a "microframework" for developing web applications. What is a "microframework"?
-2. What is another web development framework in Python?
+1. Flask is described as a "microframework" for developing web applications. What is a "microframework"? it is a minimalistic web application framework. It doesnt have all the functionality of a full stack web application. Flask relies on a lot of third party packages to accomplish everything that you would need to do. 
+2. What is another web development framework in Python? Django
 3. In this line of code: `APP = Flask(__name__)` What does `__name__` do? this is equal to the name of the module. If you run the App from a directory titled my_app then calling FLASK_APP=my_app would run the flask app. If the app is in a single file call demo.py then FLASK_APP=demo.py would run the application. 
 4. What line of your code tells when and where "Hello World!" should be displayed? the decorator @app.route("/") tells the url location "/" would be the homepage. whenever we navigate to the 'localhost:5000/' page this would call the hello world function to display "Hello World!"
 5. What do we need to type into the terminal to run our flask application? FLASK_APP='name of file or directory where app is held' flask run
