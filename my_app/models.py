@@ -15,6 +15,7 @@ class BGG(db.Model):
 
 class Stocks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(10))
     date = db.Column(db.String(70))
     open_ = db.Column(db.Float)
     high_ = db.Column(db.Float)

@@ -1,10 +1,11 @@
 from flask import Flask, Blueprint, redirect
 import requests
 from my_app.models import Stocks, db
+import json
 
 stocks_routes = Blueprint("stocks_routes", __name__)
 
-@stocks_routes.route("/add/<stock_symbol>/fetch")
+@stocks_routes.route("/add_stocks/<stock_symbol>/fetch")
 def get_stock(stock_symbol=None):
     """get a daily return of a given stock from the Alpha Vantage API
        takes those returns and iterates thru them to add them to our 'Stocks' Database
