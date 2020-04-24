@@ -6,7 +6,7 @@ from flask import Flask
 from my_app.models import db, migrate
 from my_app.routes.hello_routes import hello_routes
 from my_app.routes.BGG_routes import BGG_routes
-
+from my_app.routes.stocks_routes import stocks_routes
 
 # application factory patter
 def create_app():
@@ -18,6 +18,7 @@ def create_app():
 
     app.register_blueprint(hello_routes)
     app.register_blueprint(BGG_routes)
+    app.register_blueprint(stocks_routes)
     
     return app
 

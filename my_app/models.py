@@ -13,6 +13,14 @@ class BGG(db.Model):
     min_players = db.Column(db.Integer)
     playing_time = db.Column(db.Integer)
 
+class Stocks(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.String(70))
+    open_ = db.Column(db.Float)
+    high_ = db.Column(db.Float)
+    low_ = db.Column(db.Float)
+    close_ = db.Column(db.Float)    
+
 def parse_records(database_records):
     """
     A helper method for converting a list of database record objects into a list of dictionaries, so they can be returned as JSON
